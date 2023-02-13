@@ -1,11 +1,13 @@
+package ooppackage;
+
 import java.util.Scanner;
 
 public class LearnOop {
     private String name;
-    private int birthYear; 
+    private int birthYear = 1990; 
     private String city;
 
-    public LearnOop(String uname, int bYear, String rcity) {
+     LearnOop(String uname, int bYear, String rcity) {
         name = uname;
         birthYear = bYear;
         city = rcity;

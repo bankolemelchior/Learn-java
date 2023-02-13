@@ -6,18 +6,18 @@ import javax.swing.JOptionPane;
 public class Learning {
 
     public static void main(String[] args) {
-        String pays = JOptionPane.showInputDialog("Entrez un pays");  
-        JOptionPane.showMessageDialog(null, pays);
+        // String pays = JOptionPane.showInputDialog("Entrez un pays");  
+        // JOptionPane.showMessageDialog(null, pays);
 
-        swap(5, 10);
+        // swap(5, 10);
 
-        int[] myArray = {4, 2, 9, 1, 0};
-        orderArray(myArray);
+        // int[] myArray = {4, 2, 9, 1, 0};
+        // orderArray(myArray);
 
-        String myStr = "1 5 9 7 4 1 -6 -9 -1 485 200";
-        getHighest(myStr);
+        // String myStr = "1 5 9 7 4 1 -6 -9 -1 485 200";
+        // getHighest(myStr);
 
-        // calculate();
+        calculate();
     }
 
 
@@ -63,33 +63,80 @@ public class Learning {
 
     //Get inputs from user and perform a calculation
     public static void calculate() {
+        Double nb1;
+        Double nb2;
+
         Scanner scan = new Scanner(System.in);
-        System.out.println("Entrez un premier nombre");
-        int nb1 = scan.nextInt();
-        System.out.println("Entrez un operateur");
-        String ope = scan.next();
-        // String line = scan.nextLine();
-        System.out.println("Entrez un second nombre");
-        int nb2 = scan.nextInt();
+        // System.out.println("Entrez un premier nombre");
+        // nb1 = Double.parseDouble(scan.next());
+        // String line = scan.next();
+
+        try {
+            // System.out.println("Entrez un premier nombre");
+            // nb1 = Double.parseDouble(scan.next());
             
-        switch(ope) {
-            case "+":
-                System.out.println("operation " + nb1 + ope + nb2 + " = " + (nb1 + nb2));
-                break;
-            case "-":
-                System.out.println("operation " + nb1 + ope + nb2 + " = " + (nb1 - nb2));
-                break;
-            case "*":
-                System.out.println("operation " + nb1 + ope + nb2 + " = " + (nb1 * nb2));
-                break;
-            case "%":
-                System.out.println("operation " + nb1 + ope + nb2 + " = " + (nb1 % nb2));
-                break;
-            default:
-                System.out.println("operation invalide");
-                break;
+            do {
+                System.out.println("Entrez un premier nombre");
+                nb1 = Double.parseDouble(scan.next());
+                // String line = scan.next();
     
+    
+            } while (Double.isNaN(nb1));
+    
+
+        } catch (NumberFormatException e) {
+            // TODO: handle exception
+            System.out.println("Le nombre entré est invalide");
         }
+
+        // if(Double.isNaN(nb1)) {
+        //     System.out.println("Le nombre entré est invalide");
+        //     String line = scan.next();
+        //     break;
+        // }
+        // System.out.println("Entrez un operateur");
+        // String ope = scan.next();
+        // String line = scan.next();
+        // System.out.println("Entrez un second nombre");
+        
+        // try {
+        //     // System.out.println("Entrez un premier nombre");
+        //     // nb2 = Double.parseDouble(scan.next());
+
+        //     do {
+        //         System.out.println("Entrez un second nombre");
+        //         // System.out.println("Le nombre entré est invalide");
+        //         nb2 = Double.parseDouble(scan.next());
+        //         // scan.next();
+    
+        //     } while (Double.isNaN(nb2));
+    
+    
+
+        // } catch (NumberFormatException e) {
+        //     // TODO: handle exception
+        //     System.out.println("Le nombre entré est invalide");
+        // }
+
+            
+    //     switch(ope) {
+    //         case "+":
+    //             System.out.println("operation " + nb1 + ope + nb2 + " = " + (nb1 + nb2));
+    //             break;
+    //         case "-":
+    //             System.out.println("operation " + nb1 + ope + nb2 + " = " + (nb1 - nb2));
+    //             break;
+    //         case "*":
+    //             System.out.println("operation " + nb1 + ope + nb2 + " = " + (nb1 * nb2));
+    //             break;
+    //         case "%":
+    //             System.out.println("operation " + nb1 + ope + nb2 + " = " + (nb1 % nb2));
+    //             break;
+    //         default:
+    //             System.out.println("operation invalide");
+    //             break;
+    
+    //     }
     }
     
 
